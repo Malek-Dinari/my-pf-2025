@@ -1,73 +1,82 @@
-# React + Vite
-
 # 🛰️ My Portfolio 2025 – Malek Dinari
 
-**Status:** Work in progress (V0 planned)  
-**Tech stack:** React + Firebase + Tailwind CSS  
+Personal portfolio built with **Vite + React**, **Tailwind CSS**, and a Firebase-ready contact pipeline. It highlights projects across computer vision, rPPG-based biomedical signals, NLP, and full-stack development while providing quick access to my CV and social presence.
 
 ---
 
-## 🎯 Overview
-Personal portfolio web app to showcase my research, projects, and experience in **Computer Vision**, **Machine Learning**, and **rPPG-based biomedical signal analysis**.  
-This 2025 rebuild modernizes my earlier React portfolio with a cleaner design, interactivity, and scalability.
+## ⚙️ Tech Stack
+
+| Layer            | Technology / Service                | Purpose                                             |
+|------------------|-------------------------------------|-----------------------------------------------------|
+| Frontend         | Vite (React 19)                     | Component-driven UI with fast HMR / build times     |
+| Styling          | Tailwind CSS + custom theming       | Dark mode aesthetic, responsive grid, motion cues   |
+| Animations       | Framer Motion                       | Section fade-ins, modal transitions                 |
+| Contact Storage  | Firebase Firestore (optional)       | Persist visitor messages when env vars are provided |
+| Tooling          | TypeScript-ready config, ESLint     | Code quality and future type adoption               |
+
+Assets (profile, project imagery, CV) live in `public/` and `src/assets/` so Vercel can serve them statically.
 
 ---
 
-## ⚙️ Planned Stack & Features
+## 🏃‍♂️ Run Locally
 
-| Layer | Technology | Purpose |
-|-------|-------------|----------|
-| **Frontend** | React (CRA or Vite) | Dynamic UI & components |
-| **Styling** | Tailwind CSS | Minimalist, responsive design |
-| **Backend / Cloud** | Firebase (Hosting + Firestore + Functions + Storage) | Data, messaging, and deployment |
-| **Deployment** | Firebase Hosting | Continuous deployment via GitHub Actions |
-| **Contact Form** | Cloud Function → Email + Firestore | Receive & store visitor messages |
+```bash
+git clone git@github.com:Malek-Dinari/my-pf-2025.git
+cd my-pf-2025/malek-portfolio
+npm install
+npm run dev
+```
 
----
-
-## 🏗️ Main Sections
-
-1. **Home / Banner** – full-width intro with background image  
-2. **About** – bio, photo, CV download (`Malek_Dinari_CV.pdf`)  
-3. **Projects** – interactive cards → modal windows with details & GitHub links  
-4. **Skills** – core technologies and tools  
-5. **Contact** – Firebase-backed form with email delivery  
-6. **Footer** – links to LinkedIn, GitHub, RateYourMusic  
+Navigate to the printed `http://localhost:5173/` URL.
 
 ---
 
-## 📂 Repository Goals
+## 🔐 Environment Variables
 
-- Implement **V0**: static layout + working contact form  
-- Add dynamic project data from Firestore in future updates  
-- Maintain modular structure for scalability  
-- Serve as both portfolio and personal sandbox  
+The contact form writes to Firestore when Firebase credentials are present. Create a `.env.local` (or `.env`) inside `malek-portfolio/` with:
+
+```bash
+VITE_FIREBASE_API_KEY=...
+VITE_FIREBASE_AUTH_DOMAIN=...
+VITE_FIREBASE_PROJECT_ID=...
+VITE_FIREBASE_STORAGE_BUCKET=...
+VITE_FIREBASE_MESSAGING_SENDER_ID=...
+VITE_FIREBASE_APP_ID=...
+```
+
+- Leave the file out of git (`.gitignore` already covers it).  
+- Without these variables, the form gracefully falls back to a `mailto:` link so no deploy blocks occur.
 
 ---
 
-## 🧑‍💻 Author
+## 🚀 Deploying to Vercel
+
+1. Push the project to GitHub (`main` branch).  
+2. On [vercel.com](https://vercel.com/), **New Project → Import** `Malek-Dinari/my-pf-2025`.  
+3. Framework preset: **Vite** (Vercel auto-detects).  
+4. Add the environment variables from `.env.local` under **Settings → Environment Variables** (use the same keys as above).  
+5. Redeploy whenever `main` updates. Vercel outputs at `https://malek-dinari.vercel.app`.
+
+> Tip: the large hero image is ~1.5 MB. Optimising it (and the Mini-GPT illustration) can keep the bundle under Vercel’s 500 kB warning threshold.
+
+---
+
+## 📁 Key Sections
+
+- `src/components/` – shared layout components (navbar, timelines, etc.).  
+- `src/sections/` – hero, about, skills, experience, projects, contact, footer.  
+- `src/data/content.js` – copy, images, and metadata for education, experience, and project cards. Edit here to update the site content.
+
+---
+
+## 👤 Author
 
 **Malek Dinari**  
-- Computer Vision & Machine Learning Research  
-- ENSI / CRISTAL Lab – GRIFT Group  
+- Computer Vision & Machine Learning Engineer (ENSI · CRISTAL Lab)  
 - 📧 dinari.malek1@gmail.com  
-- 🌐 [RateYourMusic](https://rateyourmusic.com/~dinnarus)  
-- 💼 LinkedIn / GitHub (coming soon)  
-
----
-
-## 🛠️ Roadmap (short-term)
-
-- [ ] Initialize React app with Tailwind  
-- [ ] Configure Firebase project & hosting  
-- [ ] Add static assets (images, icons, CV)  
-- [ ] Build `Home`, `About`, `Projects`, `Contact` components  
-- [ ] Connect Contact form → Firebase Functions + Firestore  
-- [ ] Deploy V0 at `my-pf-2025.web.app`
+- 🔗 [GitHub](https://github.com/Malek-Dinari) · [LinkedIn](https://www.linkedin.com/in/malek-dinari-99b431263/) · [RateYourMusic](https://rateyourmusic.com/~dinnarus)
 
 ---
 
 ### 📄 License
 MIT License © 2025 Malek Dinari
-
----

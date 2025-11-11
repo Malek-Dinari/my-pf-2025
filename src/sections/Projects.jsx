@@ -57,7 +57,7 @@ const Projects = () => {
                 {project.summary}
               </p>
               <div className='mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent'>
-                <span>Read case study</span>
+                <span>Extended description</span>
                 <HiOutlineExternalLink className='h-4 w-4' />
               </div>
             </div>

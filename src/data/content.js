@@ -3,6 +3,15 @@ import portrait from '../assets/leMEcin2024.jpg'
 import githubIcon from '../assets/github-icon.png'
 import linkedinIcon from '../assets/linkedin-icon.png'
 import rymIcon from '../assets/rym-icon.jpeg'
+import projectRppg from '../assets/project-rppg-pfe.jpg'
+import projectMiniGpt from '../assets/project-mini-gpt.png'
+import projectWeefizz from '../assets/project-weefizz.jpg'
+import projectBoneMarrow from '../assets/project-bone-marrow.png'
+import projectSentiment from '../assets/project-sentiment-qa.jpg'
+import project3dExpression from '../assets/project-3d-expression.png'
+import projectBlur from '../assets/project-blur-classification.png'
+import projectProvider from '../assets/project-provider-system.jpeg'
+import projectCompiler from '../assets/project-compiler.png'
 
 export const socials = [
   {
@@ -27,7 +36,7 @@ export const hero = {
   name: 'Malek Dinari',
   role: 'AI & Computer Vision Engineer',
   summary:
-    'Data science engineer focusing on machine learning, computer vision, and applied AI systems. I design robust pipelines that connect research insights with production-grade software.',
+    'Computer science engineer targeting ML, computer vision, and AI roles. I design robust pipelines that connect research insights with production-ready software.',
   location: 'Tunis, Tunisia',
   cvLink: '/Malek_Dinari_CV.pdf',
   contactEmail: 'dinari.malek1@gmail.com',
@@ -36,10 +45,10 @@ export const hero = {
 }
 
 export const about = {
-  title: 'Complex AI, Human Impact.',
+  title: 'Striving for Impact.',
   paragraphs: [
-    `I’m a computer science engineer specializing in data science and computer vision. My work blends experimental machine learning with solid engineering practices to deliver reliable solutions.`,
-    `Recent projects span geodesic analysis for 3D facial expression recognition, transformer-based sentiment analysis, and intelligent tooling for recruitment workflows. Outside the lab, I design thoughtful user experiences, mentor peers, and keep an ear on new music releases—documented through RateYourMusic.`,
+    `I’m a computer science engineer specializing in machine learning and computer vision. My work blends research-grade experimentation with production pragmatism to deliver reliable AI systems.`,
+    `Recent projects span geodesic analysis for 3D facial expression recognition, transformer-based sentiment analysis, blur diagnostics, and mobile recommendation tools. Outside the lab, I design thoughtful user experiences, mentor peers, and keep an ear on new music releases—documented through RateYourMusic.`,
   ],
   highlights: [
     'Machine Learning & MLOps',
@@ -79,102 +88,200 @@ export const skills = [
 export const education = [
   {
     institution: 'Preparatory Institute for Engineering Studies of Nabeul',
-    focus: 'Physics & Chemistry',
+    focus: 'Mathematics & Physics (MP)',
     details:
-      'Two intensive years covering Mathematics, Physics, and Industrial Sciences in preparation for the national engineering entrance examination.',
+      'Two-year intensive preparatory cycle covering advanced mathematics, physics, chemistry, and industrial sciences in preparation for the national engineering entrance examination (ranked 193/1779).',
   },
   {
     institution: 'National School of Computer Science (ENSI)',
-    focus: 'M.Eng — Computer Science, AI & Decision Systems',
+    focus: 'Computer Science Engineering — Data Science & Computer Vision',
     details:
-      'Advanced coursework across AI, software engineering, and applied mathematics with a strong emphasis on practical, project-led learning.',
+      'Engineering curriculum covering AI, software engineering, and applied mathematics with a strong emphasis on project-led delivery and research-to-production initiatives.',
   },
 ]
 
 export const experience = [
   {
-    title: 'AI Recruitment Test Generator',
-    organization: 'EYxUIK AI Hackathon',
-    period: 'July 2024',
+    title: 'Research Engineer — rPPG & Computer Vision',
+    organization: 'CRISTAL GRIFT Laboratory, ENSI Manouba',
+    period: 'Oct 2024 – Present',
     description:
-      'Built an LLM-powered assistant that assembles domain-specific recruitment assessments using Llama 3.1 and retrieval-augmented prompts. Delivered scalable evaluation flows and analyics dashboards for the jury.',
+      'Designing remote photoplethysmography pipelines for non-invasive blood pressure estimation, balancing experimental research with deployable ML workflows in collaboration with Caire AI.',
   },
   {
-    title: 'Quantum Farm Weather Prediction',
-    organization: 'Quantum Challenge',
-    period: 'June 2024',
+    title: 'Mobile Developer Intern',
+    organization: 'Welyne · WeeFizz',
+    period: 'Jul 2023 – Sep 2023',
     description:
-      'Combined QLSTM-based hybrid models with classical feature engineering to forecast regional weather shifts for agriculture decision-making.',
-  },
-  {
-    title: 'Ophthalmic Disease Diagnosis',
-    organization: 'Talan Tunisie Bootcamp',
-    period: 'March 2024',
-    description:
-      'Led dataset curation and augmentation of retinal scans, benchmarking ResNet and VGG architectures while fusing predictions with a rule-based expert layer for robust diagnostics.',
+      'Delivered a React Native size-recommendation app that syncs with Prestashop storefronts, capturing user measurements, photos, and QR onboarding flows for personalised fit guidance.',
   },
 ]
 
 export const projects = [
   {
-    id: 'ai-recruitment',
-    name: 'AI Recruitment Test Generator',
-    organization: 'EYxUIK AI Hackathon',
-    period: 'July 2024',
+    id: 'rppg-bp-estimation',
+    name: 'Non-Invasive Blood Pressure via rPPG',
+    organization: 'PFE · CRISTAL GRIFT Lab & Caire AI',
+    period: '2024',
     summary:
-      'LLM-powered pipeline that assembles domain-specific hiring challenges in seconds.',
+      'Remote photoplethysmography pipeline estimating systolic and diastolic blood pressure from arm video captures.',
     description: [
-      'Automated creation of technical and behavioural questions using Llama 3.1 with fine-tuned retrieval modules.',
-      'Added candidate analytics dashboards with scoring heuristics and prompt transparency for evaluators.',
-      'Shipped a polished demo during the hackathon with handoff-ready documentation.',
+      'Engineered acquisition and preprocessing stages that mitigate motion artefacts and illumination noise in arm-mounted video streams.',
+      'Trained hybrid signal-processing and deep learning models to extract pulse waveform features aligned with confidential clinical ground truth.',
+      'Delivered evaluation tooling and documentation for partner reviews while respecting medical data governance.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1526554850534-7c78330d95c5?auto=format&fit=crop&w=1200&q=80',
-    repoUrl: 'https://github.com/Malek-Dinari',
+    image: projectRppg,
+    repoUrl: 'https://github.com/Malek-Dinari/private-rPPG-ToolBox',
   },
   {
-    id: 'quantum-farm',
-    name: 'Quantum Farm Weather Prediction',
-    organization: 'Quantum Challenge',
-    period: 'June 2024',
+    id: 'bone-marrow-smear',
+    name: 'Bone Marrow Smear Segmentation',
+    organization: 'ENSI · Computer Vision Lab',
+    period: '2024',
     summary:
-      'Hybrid quantum-classical models helping agritech teams anticipate weather anomalies.',
+      'AI assistant that classifies and segments bone marrow cells to support haematology diagnostics.',
     description: [
-      'Experimented with QLSTM and QSVM architectures to capture nonlinear seasonal patterns.',
-      'Deployed explainable dashboards to interpret feature contributions for agronomists.',
-      'Delivered reproducible training and inference pipelines with benchmark reports.',
+      'Fine-tuned MobileNet for lightweight segmentation before cascading YOLOv8 for multi-class cell detection and localisation.',
+      'Developed a Gradio interface on Google Colab to let clinicians inspect predictions and submit feedback.',
+      'Automated dataset curation, experiment tracking, and reporting to accelerate laboratory validation.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1200&q=80',
-    repoUrl: 'https://github.com/Malek-Dinari',
+    image: projectBoneMarrow,
+    repoUrl:
+      'https://github.com/Malek-Dinari/Bone-Marrow-Smear-Segmentation-with-Gradio-and-DL-pipeline',
   },
   {
-    id: 'ophthalmic-diagnosis',
-    name: 'Ophthalmic Disease Diagnosis',
-    organization: 'Talan Tunisie Bootcamp',
-    period: 'March 2024',
+    id: '3d-expression-recognition',
+    name: '3D Facial Expression Recognition',
+    organization: 'ENSI Research',
+    period: '2024',
     summary:
-      'Computer vision suite that flags retinal pathologies with curated imaging protocols.',
+      'Geodesic descriptors for robust facial expression classification across high-density 3D meshes.',
     description: [
-      'Collected and cleaned a diverse dataset of ophthalmic scans with domain experts.',
-      'Benchmarked ResNet and VGG variants alongside rule-based checks for medical criteria.',
-      'Provided interpretable outputs and documentation for clinical validation.',
+      'Computed pairwise geodesic distances and curvature signatures to isolate the most discriminative facial regions.',
+      'Introduced a mesh representation that captures local curvature on analytical shapes such as spheres and ellipsoids.',
+      'Trained ensemble classifiers on handcrafted descriptors to outperform Euclidean baselines on noisy scans.',
+    ],
+    image: project3dExpression,
+    repoUrl: 'https://github.com/Malek-Dinari/geodesic-potential-descriptors',
+  },
+  {
+    id: 'blur-classification',
+    name: 'Blur Classification Diagnostics',
+    organization: 'Deep Learning Lab',
+    period: '2024',
+    summary:
+      'CNN pipeline that distinguishes motion versus defocus blur to safeguard downstream computer-vision models.',
+    description: [
+      'Curated a balanced blur dataset and designed augmentation strategies to mimic real capture variance.',
+      'Fine-tuned convolutional backbones with transfer learning and focal loss to stabilise minority-class accuracy.',
+      'Applied Grad-CAM explainability to prioritise acquisition fixes with imaging stakeholders.',
+    ],
+    image: projectBlur,
+    repoUrl: 'https://github.com/Malek-Dinari/Computer-Vision-and-ML-Notebooks',
+  },
+  {
+    id: 'sentiment-qa',
+    name: 'Sentiment Analysis with QA Augmentation',
+    organization: 'NLP Research',
+    period: '2023',
+    summary:
+      'Transformer-based sentiment engine enhanced with retrieval-augmented question answering for evidence-backed tone detection.',
+    description: [
+      'Fine-tuned multilingual transformers with domain corpora and contrastive objectives to capture nuanced sentiment.',
+      'Injected retrieval-augmented QA prompts that surface text snippets explaining each prediction.',
+      'Packaged evaluation dashboards and inference scripts for downstream integration.',
+    ],
+    image: projectSentiment,
+    repoUrl: 'https://github.com/Malek-Dinari/Computer-Vision-and-ML-Notebooks',
+  },
+  {
+    id: 'weefizz-app',
+    name: 'WeeFizz Size Recommendation App',
+    organization: 'Welyne',
+    period: '2023',
+    summary:
+      'React Native mobile app that delivers personalised clothing size recommendations for Prestashop retailers.',
+    description: [
+      'Implemented QR onboarding, measurement capture, and photo workflows integrated with Welyne APIs.',
+      'Ensured responsive UX across Android and iOS by optimising navigation, caching, and accessibility states.',
+      'Instrumented analytics and error reporting to support pilot deployments with partner boutiques.',
+    ],
+    image: projectWeefizz,
+    repoUrl: 'https://github.com/Malek-Dinari/WeeFizz',
+  },
+  {
+    id: 'mini-gpt',
+    name: 'Mini-GPT Language Model',
+    organization: 'Self-Directed',
+    period: '2023 – Present',
+    summary:
+      'From-scratch GPT-style model exploring autoregressive transformers on Shakespeare corpora.',
+    description: [
+      'Implemented tokenisers, attention blocks, and training loops in PyTorch to understand GPT internals.',
+      'Benchmarked perplexity improvements while experimenting with multilayer perceptrons and residual connections.',
+      'Documented experiments in notebooks to build scaling intuition for larger language models.',
+    ],
+    image: projectMiniGpt,
+    repoUrl:
+      'https://github.com/Malek-Dinari/Models-from-scratch-Notebooks/tree/development/Mini-GPT',
+  },
+  {
+    id: 'salary-calculator',
+    name: 'ML Salary Calculator Interface',
+    organization: 'Streamlit Application',
+    period: '2023',
+    summary:
+      'Interactive salary estimation tool trained on the Stack Overflow Developer Survey and deployed with Streamlit.',
+    description: [
+      'Cleaned survey data and engineered features capturing experience, location, and tech stack indicators.',
+      'Trained regression models with hyperparameter sweeps to produce credible salary bands.',
+      'Built a Streamlit interface that explains predictions and exports reports for stakeholders.',
     ],
     image:
-      'https://images.unsplash.com/photo-1580281657521-958684f1e4fb?auto=format&fit=crop&w=1200&q=80',
-    repoUrl: 'https://github.com/Malek-Dinari',
+      'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80',
+    repoUrl: 'https://github.com/Malek-Dinari/ml-app-withstreamlit',
+  },
+  {
+    id: 'provider-management-system',
+    name: 'Provider Management System',
+    organization: 'Full-Stack Application',
+    period: '2023',
+    summary:
+      'Angular + Spring Boot platform that manages provider records with secure CRUD workflows.',
+    description: [
+      'Developed RESTful services in Spring Boot and integrated them with an Angular single-page application.',
+      'Implemented provider listing, creation forms, and validation rules backed by MySQL (phpMyAdmin).',
+      'Applied component-driven UI patterns and service abstractions to keep the codebase maintainable.',
+    ],
+    image: projectProvider,
+    repoUrl: 'https://github.com/Malek-Dinari/frontend-ams-ensi-angular-spa',
+  },
+  {
+    id: 'semantic-compiler',
+    name: 'Semantic & Syntactic Analyzer',
+    organization: 'ENSI Coursework',
+    period: '2022',
+    summary:
+      'C-based compiler component performing lexical, syntactic, and semantic analysis for custom grammars.',
+    description: [
+      'Implemented parsing routines and symbol-table management to validate user-defined expressions.',
+      'Added semantic checks and error reporting to guide learners through language constraints.',
+      'Automated test scenarios to ensure coverage across edge cases and malformed inputs.',
+    ],
+    image: projectCompiler,
+    repoUrl: 'https://github.com/Malek-Dinari/semantic-and-syntactic-C-analyzer',
   },
   {
     id: 'portfolio-2025',
     name: 'Immersive Portfolio Platform',
     organization: 'Personal Project',
-    period: 'January 2025',
+    period: '2025',
     summary:
-      'Responsive portfolio experience showcasing AI projects with Firebase-backed interactions.',
+      'Responsive portfolio experience showcasing AI projects with Firebase-ready infrastructure.',
     description: [
-      'Redesigned the portfolio with Vite, Tailwind, and Framer Motion to deliver fast, animated storytelling.',
-      'Integrated Firebase services for contact messages and analytics-ready instrumentation.',
-      'Optimized Lighthouse scores with image lazy loading, route-based motion, and core web vitals monitoring.',
+      'Redesigned the portfolio with Vite, Tailwind, and Framer Motion for performant storytelling.',
+      'Integrated Firebase-ready hooks for contact messages and analytics observability.',
+      'Optimised Lighthouse scores via image lazy loading, motion design, and core web vitals monitoring.',
     ],
     image:
       'https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=1200&q=80',
