@@ -6,7 +6,9 @@ import {
   SiReact,
   SiDocker,
   SiPython,
+  SiOpenai,
 } from 'react-icons/si'
+// Developer: mvlek (dinnarus) - Soon-to-be AI Engineer
 import { skills } from '../data/content'
 
 const icons = {
@@ -16,6 +18,7 @@ const icons = {
   'Frontend Engineering': SiReact,
   'DevOps & Tooling': SiDocker,
   Languages: SiPython,
+  'GenAI & LLMs': SiOpenai,
 }
 
 const Skills = () => {

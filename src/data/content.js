@@ -1,9 +1,11 @@
+// Developer: mvlek (dinnarus) - Soon-to-be AI Engineer
 import heroWide from '../assets/photo1me2025update.png'
 import portrait from '../assets/leMEcin2024.jpg'
 import githubIcon from '../assets/github-icon.png'
 import linkedinIcon from '../assets/linkedin-icon.png'
 import rymIcon from '../assets/rym-icon.jpeg'
-import projectRppg from '../assets/project-rppg-pfe.jpg'
+import projectRppg from '../assets/PTT-BP.jpg'
+import projectLearnLoop from '../assets/learnloop-logo-stacked.png'
 import projectMiniGpt from '../assets/project-mini-gpt.png'
 import projectWeefizz from '../assets/project-weefizz.jpg'
 import projectBoneMarrow from '../assets/project-bone-marrow.png'
@@ -34,11 +36,11 @@ export const socials = [
 export const hero = {
   greeting: 'Hi, I’m',
   name: 'Malek Dinari',
-  role: 'AI & Computer Vision Engineer',
+  role: 'AI Engineer & Computer Vision Researcher',
   summary:
-    'Computer science engineer targeting ML, computer vision, and AI roles. I design robust pipelines that connect research insights with production-ready software.',
+    'Computer science engineer targeting ML, computer vision, and AI engineering roles. I design robust pipelines that connect research insights with production-ready software.',
   location: 'Tunis, Tunisia',
-  cvLink: '/Malek_Dinari_CV.pdf',
+  cvLink: '/CV_2026_version_april10th_AI_ML_DATA.pdf',
   contactEmail: 'dinari.malek1@gmail.com',
   heroImage: heroWide,
   portrait,
@@ -47,14 +49,14 @@ export const hero = {
 export const about = {
   title: 'Striving for Impact.',
   paragraphs: [
-    `I’m a computer science engineer specializing in machine learning and computer vision. My work blends research-grade experimentation with production pragmatism to deliver reliable AI systems.`,
-    `Recent projects span geodesic analysis for 3D facial expression recognition, transformer-based sentiment analysis, blur diagnostics, and mobile recommendation tools. Outside the lab, I design thoughtful user experiences, mentor peers, and keep an ear on new music releases—documented through RateYourMusic.`,
+    `I am an AI Engineer specializing in machine learning, generative AI, and computer vision. My work blends cutting-edge research—from contactless vital signs monitoring via rPPG to building full-stack AI platforms—with production pragmatism to deliver reliable systems.`,
+    `Recent projects span from local LLM-powered study platforms (LearnLoop) and deep learning for blood pressure estimation, to geodesic analysis for 3D facial expressions. Outside the lab, I design thoughtful user experiences, mentor peers, and keep an ear on new music releases—documented through RateYourMusic.`,
   ],
   highlights: [
-    'Machine Learning & MLOps',
+    'Machine Learning & GenAI',
     'Deep Computer Vision',
-    'Generative AI for productivity',
     'Applied Research to Production',
+    'Full-Stack ML Engineering',
   ],
 }
 
@@ -68,12 +70,16 @@ export const skills = [
     description: 'YOLOv8, ResNet, OpenCV, 3D Mesh Processing',
   },
   {
+    label: 'GenAI & LLMs',
+    description: 'Ollama, Transformers, RAG, Vector Databases',
+  },
+  {
     label: 'Data & Backend',
     description: 'Python, FastAPI, Node.js, Firebase, PostgreSQL',
   },
   {
     label: 'Frontend Engineering',
-    description: 'React, Vite, Tailwind CSS, Framer Motion',
+    description: 'Next.js, Vite, React, Tailwind CSS, TypeScript',
   },
   {
     label: 'DevOps & Tooling',
@@ -102,11 +108,25 @@ export const education = [
 
 export const experience = [
   {
+    title: 'PhD Candidate / Researcher — rPPG',
+    organization: 'CRISTAL Lab, ENSI Manouba',
+    period: 'Sep 2025 – Mar 2026',
+    description:
+      'Reviewing and contributing to the state-of-the-art in remote Photoplethysmography (rPPG), applying deep learning and signal processing for camera-based heart rate and blood pressure estimation.',
+  },
+  {
+    title: 'Summer Research Intern',
+    organization: 'CRISTAL Laboratory',
+    period: 'Summer 2025',
+    description:
+      'Studied and refined geodesic descriptors for curved surface analysis, focusing on statistical learning methods for robust 3D face analysis and geometric representation.',
+  },
+  {
     title: 'Research Engineer — rPPG & Computer Vision',
-    organization: 'CRISTAL GRIFT Laboratory, ENSI Manouba',
+    organization: 'CRISTAL GRIFT Lab & cAIre Healthcare AI',
     period: 'Oct 2024 – Present',
     description:
-      'Designing remote photoplethysmography pipelines for non-invasive blood pressure estimation, balancing experimental research with deployable ML workflows in collaboration with Caire AI.',
+      'Designing remote photoplethysmography pipelines for non-invasive blood pressure estimation using multi-ROI extraction and TS-CAN models, deploying solutions inside a real-time Python GUI.',
   },
   {
     title: 'Mobile Developer Intern',
@@ -119,19 +139,34 @@ export const experience = [
 
 export const projects = [
   {
-    id: 'rppg-bp-estimation',
-    name: 'Non-Invasive Blood Pressure via rPPG',
-    organization: 'PFE · CRISTAL GRIFT Lab & Caire AI',
-    period: '2024',
+    id: 'learnloop-ai',
+    name: 'LearnLoop - AI-Powered Study Platform',
+    organization: 'Personal Project',
+    period: 'Feb 2026 - Present',
     summary:
-      'Remote photoplethysmography pipeline estimating systolic and diastolic blood pressure from arm video captures.',
+      'Full-stack AI platform generating context-aware quizzes from documents using local LLMs (Ollama + Qwen).',
     description: [
-      'Engineered acquisition and preprocessing stages that mitigate motion artefacts and illumination noise in arm-mounted video streams.',
-      'Trained hybrid signal-processing and deep learning models to extract pulse waveform features aligned with confidential clinical ground truth.',
-      'Delivered evaluation tooling and documentation for partner reviews while respecting medical data governance.',
+      'Built a document processing pipeline (FastAPI/Python) combined with a responsive Next.js 14 frontend for real-time quiz generation.',
+      'Implemented instant grading for MCQs and LLM-based feedback for short answers to facilitate Socratic coaching.',
+      'Targeting optimizations such as SSE streaming and Postgres/Redis caching for faster perceived completion times.',
+    ],
+    image: projectLearnLoop,
+    repoUrl: 'https://github.com/Malek-Dinari/LearnLoop',
+  },
+  {
+    id: 'rppg-bp-estimation',
+    name: 'rPPG-Based Blood Pressure Estimation System',
+    organization: 'R&D · CRISTAL GRIFT Lab & cAIre',
+    period: 'Feb 2025 - Present',
+    summary:
+      'End-to-end self-supervised deep learning pipeline for contactless blood pressure monitoring using remote photoplethysmography.',
+    description: [
+      'Developed a multi-ROI extraction pipeline utilizing facial and anatomical sites to recover pulse signals across spatial patches.',
+      'Trained hybrid TS-CAN attention models to joint-optimize temporal shifts and pulse waveform reconstruction.',
+      'Shipped an end-to-end tracking GUI that handles bounding boxes, signal drawing, and side-by-side validations with contact measurements.',
     ],
     image: projectRppg,
-    repoUrl: 'https://github.com/Malek-Dinari/private-rPPG-ToolBox',
+    repoUrl: 'https://github.com/Malek-Dinari/thesis-toolbox',
   },
   {
     id: 'bone-marrow-smear',
