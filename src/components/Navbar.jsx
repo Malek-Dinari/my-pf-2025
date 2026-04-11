@@ -84,6 +84,7 @@ const Navbar = () => {
             ))}
             <a
               href={hero.cvLink}
+              download="Malek_Dinari_CV_April2026.pdf"
               className="rounded-full border border-accent px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-background"
             >
               C.V.
@@ -140,6 +141,7 @@ const Navbar = () => {
                 ))}
                 <a
                   href={hero.cvLink}
+                  download="Malek_Dinari_CV_April2026.pdf"
                   className="flex-1 rounded-xl border border-accent px-4 py-2 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-background"
                 >
                   Download CV

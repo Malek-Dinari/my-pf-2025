@@ -41,6 +41,7 @@ const Hero = () => {
             </a>
             <a
               href={hero.cvLink}
+              download="Malek_Dinari_CV_April2026.pdf"
               className="rounded-full border border-borderSoft px-6 py-3 text-sm font-semibold text-textPrimary transition hover:border-accent hover:text-accent"
             >
               Download CV

@@ -40,7 +40,7 @@ export const hero = {
   summary:
     'Computer science engineer targeting ML, computer vision, and AI engineering roles. I design robust pipelines that connect research insights with production-ready software.',
   location: 'Tunis, Tunisia',
-  cvLink: '/CV_2026_version_april10th_AI_ML_DATA.pdf',
+  cvLink: '/CV_2026_april11.pdf',
   contactEmail: 'dinari.malek1@gmail.com',
   heroImage: heroWide,
   portrait,
